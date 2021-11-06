@@ -11,7 +11,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("อย่าปากดี")),
+      appBar: AppBar(title: Text("เข้าสู่ระบบ")),
     );
   }
 }
