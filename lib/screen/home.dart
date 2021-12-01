@@ -1,6 +1,9 @@
 import 'package:almost/screen/login.dart';
+// ignore: unused_import
 import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
+
+import '../xd_profile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               label: Text("Register", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return RegisterScreen();
+                  return XDProfile();
                 }));
               },
             ),
@@ -42,4 +45,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
