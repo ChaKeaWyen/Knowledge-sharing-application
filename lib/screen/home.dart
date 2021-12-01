@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../xd_profile.dart';
 import '../xdhom_e.dart';
+import '../xdlogi_n.dart';
 import '../xdregiste_r.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
               label: Text("Log in", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return XDREGISTER();
+                  return XDLOGIN();
                 }));
               },
             ),
