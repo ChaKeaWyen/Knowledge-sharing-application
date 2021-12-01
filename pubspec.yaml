@@ -30,8 +30,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   form_field_validator: ^1.1.0
-  firebase_core: ^1.6.0
-  cloud_firestore: ^3.1.0
   adobe_xd: ^2.0.0
 
 dev_dependencies:
