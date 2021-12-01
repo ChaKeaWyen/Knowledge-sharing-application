@@ -94,8 +94,8 @@ class XDProfile extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(start: 21.0, end: 24.0),
-            Pin(size: 56.0, end: 16.0),
+            Pin(start: 23.0, end: 22.0),
+            Pin(size: 56.0, end: 13.0),
             child: Stack(
               children: <Widget>[
                 Pinned.fromPins(
