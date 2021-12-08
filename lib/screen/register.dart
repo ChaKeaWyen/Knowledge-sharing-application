@@ -46,6 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   validator:
                       RequiredValidator(errorText: "กรุณากรอกรหัสผ่านด้วยงับ"),
                   obscureText: true,
+                  obscuringCharacter: '?',
                   onSaved: (String? password) {
                     profile.password = password!;
                   },
