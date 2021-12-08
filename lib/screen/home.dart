@@ -1,8 +1,6 @@
 import 'package:almost/screen/login.dart';
-// ignore: unused_import
 import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
-
 import '../xd_profile.dart';
 import '../xdhom_e.dart';
 import '../xdlogi_n.dart';

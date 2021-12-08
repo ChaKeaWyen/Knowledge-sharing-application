@@ -1,3 +1,4 @@
+import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
@@ -8,7 +9,7 @@ class XDLOGIN extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: const Color(0xff707070),
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
@@ -24,11 +25,16 @@ class XDLOGIN extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 93.0, end: 93.0),
             Pin(size: 47.0, middle: 0.4714),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16.0),
-                color: const Color(0xff000000),
-              ),
+            child: ElevatedButton(
+              //decoration: BoxDecoration(
+              //borderRadius: BorderRadius.circular(16.0),
+              //color: const Color(0xff000000),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return RegisterScreen();
+                }));
+              },
+              child: null,
             ),
           ),
           Pinned.fromPins(
@@ -36,7 +42,7 @@ class XDLOGIN extends StatelessWidget {
             Pin(size: 47.0, middle: 0.3742),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16.0),
+                borderRadius: BorderRadius.circular(1.0),
                 color: const Color(0xff000000),
               ),
             ),
@@ -61,7 +67,7 @@ class XDLOGIN extends StatelessWidget {
               'Doesn’t have an account yet?',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff000000),
               ),
               textAlign: TextAlign.left,
@@ -74,7 +80,7 @@ class XDLOGIN extends StatelessWidget {
               'Sign up',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff000000),
                 decoration: TextDecoration.underline,
               ),
@@ -88,7 +94,7 @@ class XDLOGIN extends StatelessWidget {
               'Or',
               style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 20,
+                fontSize: 18,
                 color: const Color(0xff000000),
               ),
               textAlign: TextAlign.left,
@@ -101,7 +107,7 @@ class XDLOGIN extends StatelessWidget {
               TextSpan(
                 style: TextStyle(
                   fontFamily: 'Segoe UI',
-                  fontSize: 20,
+                  fontSize: 18,
                   color: const Color(0xff000000),
                 ),
                 children: [
@@ -121,34 +127,35 @@ class XDLOGIN extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
-          Pinned.fromPins(
-            Pin(size: 94.0, middle: 0.5),
-            Pin(size: 27.0, middle: 0.3772),
-            child: Text(
-              'Username',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 88.0, middle: 0.5),
-            Pin(size: 27.0, middle: 0.4721),
-            child: Text(
-              'Password',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 20,
-                color: const Color(0xffffffff),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
+          //Pinned.fromPins(
+          //Pin(size: 94.0, middle: 0.5),
+          //Pin(size: 27.0, middle: 0.3772),
+          //child: Text(
+          //'Username',
+          //style: TextStyle(
+          //fontFamily: 'Segoe UI',
+          //fontSize: 18,
+          //color: const Color(0xffffffff),
+          //fontWeight: FontWeight.w700,
+          //),
+          //textAlign: TextAlign.left,
+          //),
+          //),
+
+          ///Pinned.fromPins(
+          //Pin(size: 88.0, middle: 0.5),
+          //Pin(size: 27.0, middle: 0.4721),
+          //child: Text(
+          //'Password',
+          //style: TextStyle(
+          //fontFamily: 'Segoe UI',
+          //fontSize: 18,
+          //color: const Color(0xffffffff),
+          //fontWeight: FontWeight.w700,
+          //),
+          //textAlign: TextAlign.left,
+          //),
+          //),
           Pinned.fromPins(
             Pin(size: 71.0, start: 7.0),
             Pin(size: 197.0, end: -10.0),
