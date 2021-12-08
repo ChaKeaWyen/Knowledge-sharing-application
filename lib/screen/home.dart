@@ -1,9 +1,11 @@
+// ignore: unused_import
 import 'package:almost/screen/login.dart';
 import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
-import '../xd_profile.dart';
+// ignore: unused_import
 import '../xdhom_e.dart';
 import '../xdlogi_n.dart';
+// ignore: unused_import
 import '../xdregiste_r.dart';
 
 class HomeScreen extends StatelessWidget {
