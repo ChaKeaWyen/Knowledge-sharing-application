@@ -29,7 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   form_field_validator: ^1.1.0
   adobe_xd: ^2.0.0
-  flutter_svg: ^0.17.4
+  flutter_svg: ^0.21.0+1
 
 
 dev_dependencies:
