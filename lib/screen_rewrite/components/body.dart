@@ -1,3 +1,4 @@
+import 'package:almost/screen_rewrite/components/background.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -5,16 +6,15 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     //Provides total height and width of the screen
-    return Container(
-      height: size.height,
-      width: double.infinity,
-      child: Stack(
-        children: <Widget>[
-          Positioned(
-            child: Image.asset("assets/images/Color bar.png"),
-          ),
-        ],
-      ),
-    );
+    return Background(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          "LOGIN",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )
+      ],
+    ));
   }
 }
