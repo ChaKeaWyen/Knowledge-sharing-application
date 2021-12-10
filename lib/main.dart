@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: "My App",
       theme: ThemeData(
         primaryColor: Bgcolor,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Color(0xffedd9d4),
       ),
       home: Loginre(),
     );
