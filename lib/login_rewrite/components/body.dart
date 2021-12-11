@@ -1,4 +1,4 @@
-import 'package:almost/screen_rewrite/components/background.dart';
+import 'package:almost/screen_rewrite/components_login/background.dart';
 // ignore: unused_import
 import 'package:almost/xdlogi_n.dart';
 import 'package:flutter/material.dart';
