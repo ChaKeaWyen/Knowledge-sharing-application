@@ -1,6 +1,5 @@
-// ignore: unused_import
-import 'package:almost/screen/Home.dart';
-import 'package:almost/login_rewrite/constant.dart';
+//import 'package:almost/screen/Home.dart';
+import 'package:almost/constant.dart';
 import 'package:almost/login_rewrite/new_login.dart';
 import 'package:flutter/material.dart';
 

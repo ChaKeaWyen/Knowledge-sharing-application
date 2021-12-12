@@ -1,14 +1,9 @@
-import 'package:almost/screen_rewrite/components_login/background.dart';
-// ignore: unused_import
-import 'package:almost/xdlogi_n.dart';
+import 'package:almost/login_rewrite/component/background.dart';
 import 'package:flutter/material.dart';
-
-import 'already_have_an_account_check.dart';
-import 'rounded_input_field.dart';
-import 'rounded_password_field.dart';
-import 'roundedbutton.dart';
-// ignore: unused_import
-import 'textfield_container.dart';
+import '../../components/already_have_an_account_check.dart';
+import '../../components/rounded_input_field.dart';
+import '../../components/rounded_password_field.dart';
+import '../../components/roundedbutton.dart';
 
 class Body extends StatelessWidget {
   get onPressed => null;

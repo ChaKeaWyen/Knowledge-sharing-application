@@ -1,16 +1,9 @@
-// ignore: unused_import
-import 'package:almost/screen/login.dart';
 import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import '../xdhom_e.dart';
-import '../xdlogi_n.dart';
-// ignore: unused_import
 import '../xdregiste_r.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               label: Text("Log in", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return XDLOGIN();
+                  return XDREGISTER();
                 }));
               },
             ),
