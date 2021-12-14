@@ -26,16 +26,16 @@ class RoundedButton extends StatelessWidget {
             primary: textColor,
             backgroundColor: Colors.grey[700],
             shape: const BeveledRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
+                borderRadius: BorderRadius.all(Radius.circular(10))),
             textStyle: TextStyle(
               fontSize: 20,
             )),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) {
-              return XDLOGIN();
-            },
-          ));
+          //Navigator.push(context, MaterialPageRoute(
+          //builder: (context) {
+          //return XDLOGIN();
+          //},
+          //));
         },
       ),
     );
