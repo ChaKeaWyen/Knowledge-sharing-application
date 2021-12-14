@@ -1,3 +1,5 @@
+import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
+import 'package:almost/login_rewrite/new_login.dart';
 import 'package:flutter/material.dart';
 
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
@@ -22,18 +24,26 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: () {},
-          child: Text(
-            login ? "SIGN UP" : "Sign in",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              fontSize: 17,
-              decoration: TextDecoration.underline,
-            ),
-          ),
-        )
+            onTap: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return SignUpre();
+              //     },
+              //   ),
+              // );
+            },
+            child: Text(
+              login ? "SIGN UP" : "Sign in",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontSize: 17,
+                decoration: TextDecoration.underline,
+              ),
+            ))
       ],
     );
   }
