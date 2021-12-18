@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Bgcolor,
         scaffoldBackgroundColor: Color(0xffedd9d4),
       ),
-      home: RegisterScreen(),
+      home: Loginre(),
     );
   }
 }
