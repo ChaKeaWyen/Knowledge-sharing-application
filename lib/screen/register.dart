@@ -2,6 +2,7 @@ import 'package:almost/model/profile.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -65,7 +66,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             validator: RequiredValidator(
                                 errorText: "กรุณากรอกรหัสผ่านด้วยงับ"),
                             obscureText: true,
-                            obscuringCharacter: '?',
                             onSaved: (String? password) {
                               profile.password = password!;
                             },
@@ -73,17 +73,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
-                              child: Text("ลงทะเบียน",
-                                  style: TextStyle(fontSize: 20)),
-                              onPressed: () {
-                                if (formKey.currentState!.validate()) {
-                                  formKey.currentState!.save();
-                                  print(
-                                      "email = ${profile.email} password = ${profile.password}");
-                                  formKey.currentState!.reset();
-                                }
-                              },
-                            ),
+                                child: Text("ลงทะเบียน",
+                                    style: TextStyle(fontSize: 20)),
+                                onPressed: () async {
+                                  if (formKey.currentState!.validate()) {
+                                    formKey.currentState!.save();
+                                    try {
+                                      await FirebaseAuth.instance
+                                          .createUserWithEmailAndPassword(
+                                              email: profile.email,
+                                              password: profile.password);
+                                      formKey.currentState!.reset();
+                                    } on FirebaseAuthException catch (e) {
+                                      print(e.message);
+                                    }
+                                  }
+                                }),
                           )
                         ],
                       ),

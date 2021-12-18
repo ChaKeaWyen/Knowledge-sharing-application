@@ -1,6 +1,6 @@
 class Profile {
-  String? email;
-  String? password;
+  String email;
+  String password;
 
-  Profile({this.email, this.password});
+  Profile({required this.email, required this.password});
 }

@@ -6,7 +6,16 @@ import 'package:almost/screen/register.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyBu2W7eoSur5RAc2CqoNNjZZVd3xmaKy4k",
+      appId: "com.example.almost",
+      messagingSenderId: "XXX",
+      projectId: "flutter-app-282df",
+    ),
+  );
   var app = MyApp();
   runApp(app);
 }
