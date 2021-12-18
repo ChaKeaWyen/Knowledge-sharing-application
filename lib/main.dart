@@ -4,6 +4,7 @@ import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
 import 'package:almost/constant.dart';
 // ignore: unused_import
 import 'package:almost/login_rewrite/new_login.dart';
+// ignore: unused_import
 import 'package:almost/screen/register.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
