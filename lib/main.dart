@@ -1,6 +1,8 @@
 //import 'package:almost/screen/Home.dart';
+// ignore: unused_import
 import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
 import 'package:almost/constant.dart';
+// ignore: unused_import
 import 'package:almost/login_rewrite/new_login.dart';
 import 'package:almost/screen/register.dart';
 import 'package:firebase_core/firebase_core.dart';
