@@ -1,4 +1,5 @@
 import 'package:almost/SignUp_rewrite/component/Background.dart';
+import 'package:almost/components/account_check.dart';
 import 'package:almost/components/already_have_an_account_check.dart';
 import 'package:almost/components/rounded_input_field.dart';
 import 'package:almost/components/rounded_passconfirmed_field.dart';
@@ -46,7 +47,7 @@ class Body extends StatelessWidget {
             text: "REGISTER",
             press: () {},
           ),
-          AlreadyHaveAnAccountCheck(
+          AlreadyHaveAnAccount(
             login: false,
             press: () {},
           ),

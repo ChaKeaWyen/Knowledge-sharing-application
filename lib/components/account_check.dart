@@ -4,12 +4,12 @@ import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
 import 'package:almost/login_rewrite/new_login.dart';
 import 'package:flutter/material.dart';
 
-class AlreadyHaveAnAccountCheck extends StatelessWidget {
+class AlreadyHaveAnAccount extends StatelessWidget {
   final bool login;
   final Function press;
-  const AlreadyHaveAnAccountCheck({
+  const AlreadyHaveAnAccount({
     Key? key,
-    this.login = true,
+    this.login = false,
     required this.press,
   }) : super(key: key);
 
@@ -31,13 +31,13 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SignUpre();
+                    return Loginre();
                   },
                 ),
               );
             },
             child: Text(
-              login ? "SIGN UP" : "SIGN IN",
+              login ? "SIGN IN" : "SIGN IN",
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
