@@ -1,12 +1,16 @@
+import 'package:almost/model/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 import 'textfield_container.dart';
 
+// ignore: must_be_immutable
 class RoundedInputField extends StatelessWidget {
   final String hintText;
   final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedInputField({
+  Profile profile = Profile(email: '', password: '');
+  RoundedInputField({
     Key? key,
     required this.hintText,
     this.icon = Icons.person,
@@ -16,7 +20,15 @@ class RoundedInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
-        child: TextField(
+        child: TextFormField(
+            validator: MultiValidator([
+              RequiredValidator(errorText: "Please enter your Email"),
+              EmailValidator(errorText: "Invalid Email format")
+            ]),
+            keyboardType: TextInputType.emailAddress,
+            onSaved: (String? email) {
+              profile.email = email!;
+            },
             onChanged: onChanged,
             cursorColor: Colors.white,
             style: TextStyle(

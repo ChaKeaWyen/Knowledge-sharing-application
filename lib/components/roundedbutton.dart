@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+// ignore: unused_import
+import 'package:form_field_validator/form_field_validator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:almost/model/profile.dart';
 // ignore: unused_import
 import '../../xdlogi_n.dart';
 
+// ignore: must_be_immutable
 class RoundedButton extends StatelessWidget {
+  final formKey = GlobalKey<FormState>();
+  Profile profile = Profile(email: '', password: '');
+  final Future<FirebaseApp> firebase = Firebase.initializeApp();
   final String text;
   final Function press;
   final Color color, textColor;
-  const RoundedButton({
+  RoundedButton({
     Key? key,
     required this.text,
     required this.press,
@@ -31,7 +39,17 @@ class RoundedButton extends StatelessWidget {
             textStyle: TextStyle(
               fontSize: 20,
             )),
-        onPressed: () {
+        onPressed: () async {
+          if (formKey.currentState!.validate()) {
+            formKey.currentState!.save();
+            try {
+              await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                  email: profile.email, password: profile.password);
+              formKey.currentState!.reset();
+            } on FirebaseAuthException catch (e) {
+              print(e.message);
+            }
+          }
           //Navigator.push(context, MaterialPageRoute(
           //builder: (context) {
           //return XDLOGIN();

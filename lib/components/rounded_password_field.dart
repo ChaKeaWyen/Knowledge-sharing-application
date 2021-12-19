@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:form_field_validator/form_field_validator.dart';
+import 'package:almost/model/profile.dart';
 import 'textfield_container.dart';
 
+// ignore: must_be_immutable
 class RoundedPasswordField extends StatelessWidget {
   final ValueChanged<String> onChanged;
-  const RoundedPasswordField({
+  Profile profile = Profile(email: '', password: '');
+  RoundedPasswordField({
     Key? key,
     required this.onChanged,
   }) : super(key: key);
@@ -12,8 +15,12 @@ class RoundedPasswordField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
-      child: TextField(
+      child: TextFormField(
+          validator: RequiredValidator(errorText: "Please enter your Password"),
           obscureText: true,
+          onSaved: (String? password) {
+            profile.password = password!;
+          },
           onChanged: onChanged,
           cursorColor: Colors.white,
           style: TextStyle(
