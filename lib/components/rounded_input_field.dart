@@ -1,3 +1,4 @@
+import 'package:almost/components/textfieldcontainer2.dart';
 import 'package:almost/model/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -19,7 +20,9 @@ class RoundedInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFieldContainer(
+    return TextFieldContainer2(
+        onChanged: onChanged,
+        hintText: hintText,
         child: TextFormField(
             validator: MultiValidator([
               RequiredValidator(errorText: "Please enter your Email"),
@@ -39,6 +42,7 @@ class RoundedInputField extends StatelessWidget {
                 icon,
                 color: Colors.white,
               ),
+              errorStyle: TextStyle(color: Colors.red[400]),
               hintText: hintText,
               hintStyle: TextStyle(fontSize: 18, color: Colors.white),
               border: InputBorder.none,

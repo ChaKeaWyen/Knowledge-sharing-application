@@ -6,6 +6,7 @@ import 'package:almost/constant.dart';
 import 'package:almost/login_rewrite/new_login.dart';
 // ignore: unused_import
 import 'package:almost/screen/register.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Bgcolor,
         scaffoldBackgroundColor: Color(0xffedd9d4),
       ),
-      home: Loginre(),
+      home: RegisterScreen(),
     );
   }
 }

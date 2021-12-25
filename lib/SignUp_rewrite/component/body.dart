@@ -4,6 +4,7 @@ import 'package:almost/components/rounded_input_field.dart';
 import 'package:almost/components/rounded_passconfirmed_field.dart';
 import 'package:almost/components/rounded_password_field.dart';
 import 'package:almost/components/roundedbutton.dart';
+import 'package:almost/login_rewrite/new_login.dart';
 // ignore: unused_import
 import 'package:almost/screen/login.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,13 @@ class Body extends StatelessWidget {
           ),
           RoundedButton(
             text: "REGISTER",
-            press: () {},
+            press: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return Loginre();
+                },
+              ));
+            },
           ),
           AlreadyHaveAnAccount(
             login: false,

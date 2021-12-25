@@ -1,3 +1,4 @@
+import 'package:almost/login_rewrite/new_login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 // ignore: unused_import
@@ -40,6 +41,21 @@ class RoundedButton extends StatelessWidget {
               fontSize: 20,
             )),
         onPressed: () async {
+          //if (formKey.currentState!.validate()) {
+          // formKey.currentState!.save();
+          //try {
+          //await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          //    email: profile.email, password: profile.password);
+          // formKey.currentState!.reset();
+          // } on FirebaseAuthException catch (e) {
+          //   print(e.message);
+          // }
+          // }
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return Loginre();
+            },
+          ));
           if (formKey.currentState!.validate()) {
             formKey.currentState!.save();
             try {
@@ -50,11 +66,6 @@ class RoundedButton extends StatelessWidget {
               print(e.message);
             }
           }
-          //Navigator.push(context, MaterialPageRoute(
-          //builder: (context) {
-          //return XDLOGIN();
-          //},
-          //));
         },
       ),
     );
