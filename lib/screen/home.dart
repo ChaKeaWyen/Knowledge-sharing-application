@@ -1,6 +1,6 @@
+import 'package:almost/screen/login.dart';
 import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
-import '../xdregiste_r.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               label: Text("Log in", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return XDREGISTER();
+                  return LoginScreen();
                 }));
               },
             ),

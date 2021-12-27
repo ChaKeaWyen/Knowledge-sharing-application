@@ -6,7 +6,6 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:almost/model/profile.dart';
 // ignore: unused_import
-import '../../xdlogi_n.dart';
 
 // ignore: must_be_immutable
 class RoundedButton extends StatelessWidget {
@@ -41,21 +40,6 @@ class RoundedButton extends StatelessWidget {
               fontSize: 20,
             )),
         onPressed: () async {
-          //if (formKey.currentState!.validate()) {
-          // formKey.currentState!.save();
-          //try {
-          //await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          //    email: profile.email, password: profile.password);
-          // formKey.currentState!.reset();
-          // } on FirebaseAuthException catch (e) {
-          //   print(e.message);
-          // }
-          // }
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) {
-              return Loginre();
-            },
-          ));
           if (formKey.currentState!.validate()) {
             formKey.currentState!.save();
             try {
@@ -66,6 +50,11 @@ class RoundedButton extends StatelessWidget {
               print(e.message);
             }
           }
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return Loginre();
+            },
+          ));
         },
       ),
     );
