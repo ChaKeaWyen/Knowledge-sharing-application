@@ -66,7 +66,16 @@ class _BodyNewState extends State<BodyNew> {
                     ),
                     RoundedButton(
                       text: "LOGIN",
-                      press: () {},
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SignUpre();
+                            },
+                          ),
+                        );
+                      },
                     ),
                     SizedBox(
                       height: size.height * 0,

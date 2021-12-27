@@ -1,4 +1,5 @@
 import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
+import 'package:almost/pages/homepages.dart';
 import 'package:almost/login_rewrite/component/background.dart';
 import 'package:flutter/material.dart';
 import '../../components/already_have_an_account_check.dart';
@@ -38,7 +39,16 @@ class Body extends StatelessWidget {
           ),
           RoundedButton(
             text: "LOGIN",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Homere();
+                  },
+                ),
+              );
+            },
           ),
           SizedBox(
             height: size.height * 0,
