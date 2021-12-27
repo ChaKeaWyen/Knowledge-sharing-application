@@ -1,3 +1,5 @@
+import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
+import 'package:almost/login_rewrite/new_login.dart';
 import 'package:almost/screen/login.dart';
 import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               label: Text("Register", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return RegisterScreen();
+                  return SignUpre();
                 }));
               },
             ),
@@ -31,7 +33,7 @@ class HomeScreen extends StatelessWidget {
               label: Text("Log in", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return LoginScreen();
+                  return Loginre();
                 }));
               },
             ),
