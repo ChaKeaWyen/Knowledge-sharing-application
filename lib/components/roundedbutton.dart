@@ -5,8 +5,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:almost/model/profile.dart';
-// ignore: unused_import
 
+// ignore: unused_import
 // ignore: must_be_immutable
 class RoundedButton extends StatelessWidget {
   final formKey = GlobalKey<FormState>();

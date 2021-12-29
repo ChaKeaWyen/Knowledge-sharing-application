@@ -1,9 +1,11 @@
 //import 'package:almost/screen/Home.dart';
 // ignore: unused_import
 import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
-import 'package:almost/constant.dart';
+import 'package:almost/StartScreen/StartScreen.dart';
+import 'package:almost/model/constant.dart';
 // ignore: unused_import
 import 'package:almost/login_rewrite/new_login.dart';
+import 'package:almost/screen/home.dart';
 // ignore: unused_import
 import 'package:almost/screen/register.dart';
 
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Bgcolor,
         scaffoldBackgroundColor: Color(0xffedd9d4),
       ),
-      home: RegisterScreen(),
+      home: HomeScreen(),
     );
   }
 }

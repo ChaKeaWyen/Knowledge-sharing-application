@@ -1,7 +1,6 @@
 import 'package:almost/SignUp_rewrite/component/Background.dart';
 import 'package:almost/components/account_check.dart';
 import 'package:almost/components/rounded_input_field.dart';
-import 'package:almost/components/rounded_passconfirmed_field.dart';
 import 'package:almost/components/rounded_password_field.dart';
 import 'package:almost/components/roundedbutton.dart';
 import 'package:almost/login_rewrite/new_login.dart';
@@ -38,9 +37,6 @@ class Body extends StatelessWidget {
             onChanged: (value) {},
           ),
           RoundedPasswordField(
-            onChanged: (value) {},
-          ),
-          RoundedPasswordConfirmedField(
             onChanged: (value) {},
           ),
           RoundedButton(

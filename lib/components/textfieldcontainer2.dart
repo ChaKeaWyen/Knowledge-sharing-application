@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:almost/model/profile.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class TextFieldContainer2 extends StatefulWidget {
   final Widget child;
