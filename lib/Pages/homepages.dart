@@ -21,7 +21,7 @@ class _HomereState extends State<Homere> {
   }
 
   final List<Widget> _pages = [
-    UserHomePage(),
+    Tile(),
     UserSearchPage(),
     UserFavPage(),
     UserProfilePage(),
