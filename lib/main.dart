@@ -1,13 +1,13 @@
 //import 'package:almost/screen/Home.dart';
-// ignore: unused_import
+
+// ignore_for_file: unused_import
+
 import 'package:almost/Pages/homepages.dart';
 import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
 import 'package:almost/StartScreen/StartScreen.dart';
 import 'package:almost/model/constant.dart';
-// ignore: unused_import
 import 'package:almost/login_rewrite/new_login.dart';
 import 'package:almost/screen/home.dart';
-// ignore: unused_import
 import 'package:almost/screen/register.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         scaffoldBackgroundColor: Color(0000000000),
       ),
-      home: HomeScreen(),
+      home: Homere(),
     );
   }
 }

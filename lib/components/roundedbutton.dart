@@ -1,12 +1,13 @@
+// ignore_for_file: unused_import
+
 import 'package:almost/login_rewrite/new_login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-// ignore: unused_import
+
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:almost/model/profile.dart';
 
-// ignore: unused_import
 // ignore: must_be_immutable
 class RoundedButton extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
