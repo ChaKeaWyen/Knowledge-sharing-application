@@ -1,5 +1,6 @@
 import 'package:almost/components/textfield_container.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RoundedPasswordConfirmedField extends StatelessWidget {
   final ValueChanged<String> onChanged;
@@ -15,12 +16,12 @@ class RoundedPasswordConfirmedField extends StatelessWidget {
           obscureText: true,
           onChanged: onChanged,
           cursorColor: Colors.white,
-          style: TextStyle(
+          style: GoogleFonts.exo(
             color: Colors.white,
           ),
           decoration: InputDecoration(
             hintText: 'Confirmed Password',
-            hintStyle: TextStyle(
+            hintStyle: GoogleFonts.exo(
               fontSize: 18,
               color: Colors.white,
             ),

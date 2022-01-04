@@ -1,12 +1,14 @@
 // ignore_for_file: unused_import
 
 import 'package:almost/login_rewrite/new_login.dart';
+import 'package:almost/model/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:almost/model/profile.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class RoundedButton extends StatelessWidget {
@@ -30,14 +32,15 @@ class RoundedButton extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 50),
       width: size.width * 0.7,
+      height: size.height * 0.08,
       child: TextButton(
           child: Text(text),
           style: TextButton.styleFrom(
               primary: textColor,
-              backgroundColor: Colors.grey[700],
-              shape: const BeveledRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
-              textStyle: TextStyle(
+              backgroundColor: Wine,
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30))),
+              textStyle: GoogleFonts.exo(
                 fontSize: 20,
               )),
           onPressed: press

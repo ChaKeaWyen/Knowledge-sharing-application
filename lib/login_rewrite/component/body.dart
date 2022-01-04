@@ -2,6 +2,7 @@ import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
 import 'package:almost/pages/homepages.dart';
 import 'package:almost/login_rewrite/component/background.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../components/already_have_an_account_check.dart';
 import '../../components/rounded_input_field.dart';
 import '../../components/rounded_password_field.dart';
@@ -22,10 +23,8 @@ class Body extends StatelessWidget {
                 children: <Widget>[
           Text(
             "LOGIN",
-            style: TextStyle(
-                fontFamily: "Segoe UI",
-                fontSize: 50,
-                fontWeight: FontWeight.bold),
+            style:
+                GoogleFonts.pushster(fontSize: 50, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: size.height * 0.1,

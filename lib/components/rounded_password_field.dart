@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:almost/model/profile.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'textfield_container.dart';
 
 // ignore: must_be_immutable
@@ -23,12 +24,12 @@ class RoundedPasswordField extends StatelessWidget {
           },
           onChanged: onChanged,
           cursorColor: Colors.white,
-          style: TextStyle(
+          style: GoogleFonts.exo(
             color: Colors.white,
           ),
           decoration: InputDecoration(
             hintText: 'Password',
-            hintStyle: TextStyle(
+            hintStyle: GoogleFonts.exo(
               fontSize: 18,
               color: Colors.white,
             ),

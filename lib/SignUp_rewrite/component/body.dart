@@ -1,12 +1,14 @@
 import 'package:almost/SignUp_rewrite/component/Background.dart';
 import 'package:almost/components/account_check.dart';
 import 'package:almost/components/rounded_input_field.dart';
+import 'package:almost/components/rounded_passconfirmed_field.dart';
 import 'package:almost/components/rounded_password_field.dart';
 import 'package:almost/components/roundedbutton.dart';
 import 'package:almost/login_rewrite/new_login.dart';
 // ignore: unused_import
 import 'package:almost/screen/login.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -24,10 +26,8 @@ class Body extends StatelessWidget {
           ),
           Text(
             "REGISTER",
-            style: TextStyle(
-                fontFamily: "Segoe UI",
-                fontSize: 50,
-                fontWeight: FontWeight.bold),
+            style:
+                GoogleFonts.pushster(fontSize: 50, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: size.height * 0.1,
@@ -39,6 +39,7 @@ class Body extends StatelessWidget {
           RoundedPasswordField(
             onChanged: (value) {},
           ),
+          RoundedPasswordConfirmedField(onChanged: (value) {}),
           RoundedButton(
             text: "REGISTER",
             press: () {
