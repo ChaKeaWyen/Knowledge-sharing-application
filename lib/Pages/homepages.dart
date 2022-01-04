@@ -30,6 +30,20 @@ class _HomereState extends State<Homere> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 30,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: Icon(
+              Icons.settings_rounded,
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: Container(
         decoration:
