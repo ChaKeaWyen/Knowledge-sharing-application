@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:almost/Pages/search.dart';
+import 'package:almost/model/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,138 +53,163 @@ class Tile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Almost',
-              style: GoogleFonts.pushster(
-                fontSize: 45,
-                fontWeight: FontWeight.bold,
+        body: SafeArea(
+      child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+          child: Stack(
+            children: [
+              Container(
+                alignment: Alignment.topRight,
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.settings_rounded),
+                      color: Colors.black,
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            // App bar categories
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return UserSearchPage();
-                      },
-                    ));
-                  },
-                  child: Text(
-                    '      New      ',
-                    style: GoogleFonts.pushster(
-                      fontSize: 14,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                      padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(15)),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xffc14b3d)),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ))),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return UserSearchPage();
-                      },
-                    ));
-                  },
-                  child: Text(
-                    '   Popular   ',
-                    style: GoogleFonts.pushster(
-                      fontSize: 14,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                      padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(15)),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xffc14b3d)),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ))),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return UserSearchPage();
-                      },
-                    ));
-                  },
-                  child: Text(
-                    '   Update   ',
-                    style: GoogleFonts.pushster(
-                      fontSize: 14,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                      padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(15)),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xffc14b3d)),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ))),
-                ),
-              ],
-            ),
-            // SCrolling view
-            SizedBox(
-              height: 24,
-            ),
-            Expanded(
-                child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 25),
-              child: StaggeredGridView.countBuilder(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 15,
-                  itemCount: img.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Almost',
+                      style: GoogleFonts.pushster(
+                        fontSize: 45,
+                        fontWeight: FontWeight.bold,
                       ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(img[index], fit: BoxFit.fill),
+                    ),
+
+                    SizedBox(
+                      height: 10,
+                    ),
+                    // App bar categories
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return UserSearchPage();
+                              },
+                            ));
+                          },
+                          child: Text(
+                            '      New      ',
+                            style: GoogleFonts.pushster(
+                              fontSize: 14,
+                            ),
+                          ),
+                          style: ButtonStyle(
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                  EdgeInsets.all(15)),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Color(0xffc14b3d)),
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              ))),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return UserSearchPage();
+                              },
+                            ));
+                          },
+                          child: Text(
+                            '   Popular   ',
+                            style: GoogleFonts.pushster(
+                              fontSize: 14,
+                            ),
+                          ),
+                          style: ButtonStyle(
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                  EdgeInsets.all(15)),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Color(0xffc14b3d)),
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              ))),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return UserSearchPage();
+                              },
+                            ));
+                          },
+                          child: Text(
+                            '   Update   ',
+                            style: GoogleFonts.pushster(
+                              fontSize: 14,
+                            ),
+                          ),
+                          style: ButtonStyle(
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                  EdgeInsets.all(15)),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Color(0xffc14b3d)),
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              ))),
+                        ),
+                      ],
+                    ),
+                    // SCrolling view
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 25),
+                        child: StaggeredGridView.countBuilder(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 15,
+                            mainAxisSpacing: 15,
+                            itemCount: img.length,
+                            itemBuilder: (context, index) {
+                              return Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Image.network(img[index],
+                                      fit: BoxFit.fill),
+                                ),
+                              );
+                            },
+                            staggeredTileBuilder: (index) {
+                              return new StaggeredTile.count(
+                                  1, index.isEven ? 1.2 : 2);
+                            }),
                       ),
-                    );
-                  },
-                  staggeredTileBuilder: (index) {
-                    return new StaggeredTile.count(1, index.isEven ? 1.2 : 2);
-                  }),
-            ))
-          ],
-        ),
-      )),
-    );
+                    )
+                  ],
+                ),
+              ),
+            ],
+          )),
+    ));
     //return Container(
     // margin: EdgeInsets.all(10),
     //child: ClipRRect(
