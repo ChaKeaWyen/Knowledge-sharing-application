@@ -1,5 +1,6 @@
 import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
 import 'package:almost/login_rewrite/new_login.dart';
+import 'package:almost/screen/register.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -20,7 +21,7 @@ class Body extends StatelessWidget {
               label: Text("Register", style: TextStyle(fontSize: 20)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return SignUpre();
+                  return RegisterScreen();
                 }));
               },
             ),
