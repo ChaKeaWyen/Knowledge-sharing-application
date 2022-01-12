@@ -16,13 +16,13 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: FirebaseOptions(
-      apiKey: "AIzaSyBu2W7eoSur5RAc2CqoNNjZZVd3xmaKy4k",
-      appId: "com.example.almost",
-      messagingSenderId: "XXX",
-      projectId: "flutter-app-282df",
-    ),
-  );
+      // options: FirebaseOptions(
+      //   apiKey: "AIzaSyBu2W7eoSur5RAc2CqoNNjZZVd3xmaKy4k",
+      //   appId: "com.example.almost",
+      //   messagingSenderId: "XXX",
+      //   projectId: "flutter-app-282df",
+      // ),
+      );
   var app = MyApp();
   runApp(app);
 }
@@ -33,11 +33,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "My App",
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        scaffoldBackgroundColor: Color(0000000000),
-      ),
-      home: Homere(),
+      theme: ThemeData(primaryColor: Bgcolor),
+      home: StartScreen(),
     );
   }
 }

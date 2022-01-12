@@ -52,18 +52,18 @@ class Body extends StatelessWidget {
           SizedBox(
             height: size.height * 0,
           ),
-          AlreadyHaveAnAccountCheck(
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SignUpre();
-                  },
-                ),
-              );
-            },
-          )
+          // AlreadyHaveAnAccountCheck(
+          //   press: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) {
+          //           return SignUpre();
+          //         },
+          //       ),
+          //     );
+          //   },
+          // )
         ])));
   }
 }

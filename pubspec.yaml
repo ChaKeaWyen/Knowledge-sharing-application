@@ -35,6 +35,7 @@ dependencies:
   flutter_svg: ^0.21.0+1
   firebase_core: ^1.10.5
   firebase_auth: ^3.3.4
+  fluttertoast: ^8.0.8
 
 
 dev_dependencies:
