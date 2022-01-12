@@ -1,6 +1,8 @@
 import 'package:almost/model/profile.dart';
+import 'package:almost/screen/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -82,10 +84,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       await FirebaseAuth.instance
                                           .createUserWithEmailAndPassword(
                                               email: profile.email,
-                                              password: profile.password);
-                                      formKey.currentState!.reset();
+                                              password: profile.password)
+                                          .then((value) {
+                                        formKey.currentState!.reset();
+                                        Fluttertoast.showToast(
+                                            msg: "Register successfully",
+                                            gravity: ToastGravity.CENTER);
+                                      });
+                                      Navigator.pushReplacement(context,
+                                          MaterialPageRoute(builder: (context) {
+                                        return LoginScreen();
+                                      }));
                                     } on FirebaseAuthException catch (e) {
-                                      print(e.message);
+                                      Fluttertoast.showToast(
+                                          msg: e.code,
+                                          gravity: ToastGravity.CENTER);
                                     }
                                   }
                                 }),
