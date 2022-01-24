@@ -90,11 +90,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         Fluttertoast.showToast(
                                             msg: "Register successfully",
                                             gravity: ToastGravity.CENTER);
+                                        Navigator.pushReplacement(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return LoginScreen();
+                                        }));
                                       });
-                                      Navigator.pushReplacement(context,
-                                          MaterialPageRoute(builder: (context) {
-                                        return LoginScreen();
-                                      }));
                                     } on FirebaseAuthException catch (e) {
                                       Fluttertoast.showToast(
                                           msg: e.code,
