@@ -11,22 +11,10 @@ class UserSearchPage extends StatelessWidget {
         body: SafeArea(
       child: Stack(
         children: [
-          Container(
-            alignment: Alignment.topRight,
-            child: Column(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.settings_rounded),
-                  color: Colors.black,
-                )
-              ],
-            ),
-          ),
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 18),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: ListView(
+                //crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     'Search',
@@ -143,6 +131,28 @@ class UserSearchPage extends StatelessWidget {
                   ),
                 ],
               )),
+          Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Colors.white.withOpacity(0), Colors.white]),
+                color: Colors.white),
+            height: 40,
+            alignment: Alignment.topRight,
+            child: Row(
+              children: [
+                //Text(
+                //  'Search',
+                //  style:
+                //      GoogleFonts.pushster(fontSize: 32, color: Colors.black),
+                // ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.settings_rounded),
+                  color: Colors.black,
+                )
+              ],
+            ),
+          ),
         ],
       ),
     ));
