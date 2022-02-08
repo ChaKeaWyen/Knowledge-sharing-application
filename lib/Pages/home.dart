@@ -1,10 +1,13 @@
 // ignore_for_file: unused_import
 
+import 'package:almost/Pages/homepages.dart';
 import 'package:almost/Pages/search.dart';
 import 'package:almost/model/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'notepage.dart';
 
 //class UserHomePage extends StatelessWidget {
 //const UserHomePage({Key? key}) : super(key: key);
@@ -66,6 +69,7 @@ class Tile extends StatelessWidget {
                       onPressed: () {},
                       icon: Icon(Icons.settings_rounded),
                       color: Colors.black,
+                      tooltip: "Setting",
                     )
                   ],
                 ),
@@ -94,7 +98,7 @@ class Tile extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return UserSearchPage();
+                                return Homere();
                               },
                             ));
                           },
@@ -121,7 +125,7 @@ class Tile extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return UserSearchPage();
+                                return Homere();
                               },
                             ));
                           },
@@ -148,7 +152,7 @@ class Tile extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return UserSearchPage();
+                                return Homere();
                               },
                             ));
                           },
@@ -186,17 +190,34 @@ class Tile extends StatelessWidget {
                             mainAxisSpacing: 15,
                             itemCount: img.length,
                             itemBuilder: (context, index) {
-                              return Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.transparent,
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Image.network(img[index],
-                                      fit: BoxFit.fill),
-                                ),
-                              );
+                              return InkWell(
+                                  onTap: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Detail(img);
+                                    }));
+                                  },
+
+                                  //style: ButtonStyle(
+                                  //  backgroundColor:
+                                  //   MaterialStateProperty.all<Color>(
+                                  //      Colors.white),
+                                  // shape: MaterialStateProperty.all<
+                                  //       RoundedRectangleBorder>(
+                                  //    RoundedRectangleBorder(
+                                  //  borderRadius: BorderRadius.circular(20),
+                                  // ))),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: Image.network(img[index],
+                                          fit: BoxFit.fill),
+                                    ),
+                                  ));
                             },
                             staggeredTileBuilder: (index) {
                               return new StaggeredTile.count(

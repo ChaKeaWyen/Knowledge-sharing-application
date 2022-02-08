@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'notepage.dart';
 import 'search.dart';
 
 // ignore: must_be_immutable
@@ -35,6 +36,7 @@ class UserFavPage extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(Icons.settings_rounded),
               color: Colors.black,
+              tooltip: "Setting",
             )
           ],
         ),
@@ -61,16 +63,24 @@ class UserFavPage extends StatelessWidget {
                       mainAxisSpacing: 15,
                       itemCount: img.length,
                       itemBuilder: (context, index) {
-                        return Container(
-                          decoration: BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.network(img[index], fit: BoxFit.fill),
-                          ),
-                        );
+                        return InkWell(
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Detail(img);
+                              }));
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child:
+                                    Image.network(img[index], fit: BoxFit.fill),
+                              ),
+                            ));
                       },
                       staggeredTileBuilder: (index) {
                         return StaggeredTile.count(1, index.isEven ? 1.2 : 2);

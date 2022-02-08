@@ -149,6 +149,7 @@ class UserSearchPage extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(Icons.settings_rounded),
                   color: Colors.black,
+                  tooltip: "Setting",
                 )
               ],
             ),
