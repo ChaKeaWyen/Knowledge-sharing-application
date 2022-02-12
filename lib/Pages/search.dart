@@ -1,3 +1,4 @@
+import 'package:almost/Pages/tagpage.dart';
 import 'package:almost/model/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -56,15 +57,15 @@ class UserSearchPage extends StatelessWidget {
                     spacing: 10,
                     runSpacing: 10,
                     children: <Widget>[
-                      Tag(text: '#Physic'),
-                      Tag(text: '#Chemistry'),
-                      Tag(text: '#Social'),
-                      Tag(text: '#English'),
-                      Tag(text: '#Math'),
-                      Tag(text: '#Thai'),
-                      Tag(text: '#Biology'),
-                      Tag(text: '#History'),
-                      Tag(text: '#Religion'),
+                      Tag(text1: '#Physic'),
+                      Tag(text1: '#Chemistry'),
+                      Tag(text1: '#Social'),
+                      Tag(text1: '#English'),
+                      Tag(text1: '#Math'),
+                      Tag(text1: '#Thai'),
+                      Tag(text1: '#Biology'),
+                      Tag(text1: '#History'),
+                      Tag(text1: '#Religion'),
                     ],
                   ),
                   SizedBox(
@@ -87,15 +88,15 @@ class UserSearchPage extends StatelessWidget {
                     spacing: 10,
                     runSpacing: 10,
                     children: <Widget>[
-                      Tag(text: '#Geography'),
-                      Tag(text: '#Renaissance'),
-                      Tag(text: '#Astronomy'),
-                      Tag(text: '#Anatomy'),
-                      Tag(text: '#Art'),
-                      Tag(text: '#Pure math'),
-                      Tag(text: '#Quantum'),
-                      Tag(text: '#Acid-Base'),
-                      Tag(text: '#Psychology'),
+                      Tag(text1: '#Geography'),
+                      Tag(text1: '#Renaissance'),
+                      Tag(text1: '#Astronomy'),
+                      Tag(text1: '#Anatomy'),
+                      Tag(text1: '#Art'),
+                      Tag(text1: '#Pure math'),
+                      Tag(text1: '#Quantum'),
+                      Tag(text1: '#Acid-Base'),
+                      Tag(text1: '#Psychology'),
                     ],
                   ),
                   SizedBox(
@@ -118,15 +119,15 @@ class UserSearchPage extends StatelessWidget {
                     spacing: 10,
                     runSpacing: 10,
                     children: <Widget>[
-                      Tag(text: '#Geography'),
-                      Tag(text: '#Renaissance'),
-                      Tag(text: '#Astronomy'),
-                      Tag(text: '#Anatomy'),
-                      Tag(text: '#Art'),
-                      Tag(text: '#Pure math'),
-                      Tag(text: '#Quantum'),
-                      Tag(text: '#Acid-Base'),
-                      Tag(text: '#Psychology'),
+                      Tag(text1: '#Geography'),
+                      Tag(text1: '#Renaissance'),
+                      Tag(text1: '#Astronomy'),
+                      Tag(text1: '#Anatomy'),
+                      Tag(text1: '#Art'),
+                      Tag(text1: '#Pure math'),
+                      Tag(text1: '#Quantum'),
+                      Tag(text1: '#Acid-Base'),
+                      Tag(text1: '#Psychology'),
                     ],
                   ),
                 ],
@@ -177,10 +178,10 @@ class CategoryDevider extends StatelessWidget {
 }
 
 class Tag extends StatelessWidget {
-  final String text;
+  final String text1;
   const Tag({
     Key? key,
-    required this.text,
+    required this.text1,
   }) : super(key: key);
 
   @override
@@ -193,10 +194,14 @@ class Tag extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30))),
             backgroundColor: MaterialStateProperty.all<Color>(Peach)),
         child: Text(
-          text,
+          text1,
           style: GoogleFonts.exo(color: Colors.white),
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return Tagpage(text: text1);
+          }));
+        },
       ),
     );
   }

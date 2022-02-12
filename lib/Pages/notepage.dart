@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:like_button/like_button.dart';
 
+import 'profilere.dart';
+
 // ignore: must_be_immutable
 class Detail extends StatelessWidget {
   Detail(List img);
@@ -52,9 +54,17 @@ class Detail extends StatelessWidget {
             SizedBox(
               width: 20,
             ),
-            Text(
-              'kokosugar',
-              style: GoogleFonts.pushster(),
+            TextButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return UserProfilePage();
+                }));
+              },
+              child: Text(
+                'kokosugar',
+                style: GoogleFonts.pushster(
+                    fontWeight: FontWeight.bold, color: Colors.black),
+              ),
             )
           ],
         ),

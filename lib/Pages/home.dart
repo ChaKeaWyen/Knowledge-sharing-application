@@ -2,6 +2,7 @@
 
 import 'package:almost/Pages/homepages.dart';
 import 'package:almost/Pages/search.dart';
+import 'package:almost/Pages/tagpage.dart';
 import 'package:almost/model/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -98,7 +99,7 @@ class Tile extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return Homere();
+                                return Tagpage(text: 'New');
                               },
                             ));
                           },
@@ -125,7 +126,7 @@ class Tile extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return Homere();
+                                return Tagpage(text: 'Popular');
                               },
                             ));
                           },
@@ -152,7 +153,7 @@ class Tile extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return Homere();
+                                return Tagpage(text: 'Update');
                               },
                             ));
                           },
