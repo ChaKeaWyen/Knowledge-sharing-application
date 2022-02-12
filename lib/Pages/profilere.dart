@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+import 'homepages.dart';
 import 'notepage.dart';
 
 // ignore: must_be_immutable
@@ -45,9 +46,25 @@ class UserProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                'Profile',
-                style: GoogleFonts.pushster(fontSize: 32, color: Colors.black),
+              Row(
+                children: [
+                  FloatingActionButton.small(
+                      child: Icon(Icons.arrow_left),
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      elevation: 0,
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return Homere();
+                        }));
+                      }),
+                  Text(
+                    'Profile',
+                    style:
+                        GoogleFonts.pushster(fontSize: 32, color: Colors.black),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 10,
