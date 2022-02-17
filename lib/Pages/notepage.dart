@@ -214,9 +214,9 @@ class Detail extends StatelessWidget {
                   spacing: 10,
                   runSpacing: 10,
                   children: <Widget>[
-                    Tag(text: '#Math'),
-                    Tag(text: '#Trigonometry'),
-                    Tag(text: '#HighschoolMath'),
+                    Tag(text1: '#Math'),
+                    Tag(text1: '#Trigonometry'),
+                    Tag(text1: '#HighschoolMath'),
                   ],
                 ),
               ),
