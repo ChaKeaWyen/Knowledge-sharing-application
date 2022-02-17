@@ -139,7 +139,7 @@ class UserSearchPage extends StatelessWidget {
                 color: Colors.white),
             height: 40,
             alignment: Alignment.topRight,
-            child: Row(
+            child: Column(
               children: [
                 //Text(
                 //  'Search',
