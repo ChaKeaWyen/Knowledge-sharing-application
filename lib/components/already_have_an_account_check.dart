@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
   final bool login;
-  final Function press;
+  final Function swap;
   const AlreadyHaveAnAccountCheck({
     Key? key,
     this.login = true,
-    required this.press,
+    required this.swap,
   }) : super(key: key);
 
   @override
@@ -26,16 +26,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           ),
         ),
         GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SignUpre();
-                  },
-                ),
-              );
-            },
+            onTap: swap(),
             child: Text(
               login ? "SIGN UP" : "SIGN IN",
               style: TextStyle(

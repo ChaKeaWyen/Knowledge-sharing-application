@@ -81,7 +81,7 @@ class _BodyNewState extends State<BodyNew> {
                       height: size.height * 0,
                     ),
                     AlreadyHaveAnAccountCheck(
-                      press: () {
+                      swap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(

@@ -35,9 +35,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
           }
           if (snapshot.connectionState == ConnectionState.done) {
             return Scaffold(
-              appBar: AppBar(
-                title: Text("สร้างบัญชีผู้ใช้"),
-              ),
               body: Container(
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -47,8 +44,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("E-mail", style: TextStyle(fontSize: 20)),
                           TextFormField(
+                            decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.red),
+                                borderRadius: BorderRadius.circular(5.5),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.red),
+                                borderRadius: BorderRadius.circular(5.5),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.person,
+                                color: Colors.red,
+                              ),
+                              hintText: "Enter your E-mail",
+                              hintStyle: TextStyle(color: Colors.red),
+                              filled: true,
+                              fillColor: Colors.red[50],
+                            ),
                             validator: MultiValidator([
                               RequiredValidator(
                                   errorText: "กรุณาป้อนอีเมล์ด้วยงับ"),

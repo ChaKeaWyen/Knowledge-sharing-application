@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) {
-                  return RegisterScreen();
+                  return SignUpre();
                 }));
               },
             ),

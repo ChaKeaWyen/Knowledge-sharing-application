@@ -11,6 +11,7 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       height: size.height,
       width: double.infinity,
       child: Stack(
@@ -18,7 +19,7 @@ class Background extends StatelessWidget {
         children: <Widget>[
           Positioned(
             top: 700,
-            left: 0,
+            left: -10,
             child: Image.asset(
               "assets/images/Color bar.png",
               width: size.width,
