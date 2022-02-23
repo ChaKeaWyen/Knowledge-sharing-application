@@ -4,11 +4,9 @@
 
 import 'package:almost/Pages/homepages.dart';
 import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
-import 'package:almost/StartScreen/StartScreen.dart';
+
 import 'package:almost/model/constant.dart';
 import 'package:almost/login_rewrite/new_login.dart';
-import 'package:almost/screen/home.dart';
-import 'package:almost/screen/register.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "My App",
       theme: ThemeData(primaryColor: Bgcolor),
-      home: StartScreen(),
+      home: SignUpre(),
     );
   }
 }
