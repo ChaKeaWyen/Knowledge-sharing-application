@@ -1,6 +1,5 @@
-import 'package:almost/SignUp_rewrite/component/Background.dart';
-
-import 'package:almost/login_rewrite/new_login.dart';
+import 'package:almost/Authentication/SignUp_rewrite/component/background.dart';
+import 'package:almost/Authentication/login_rewrite/Login_Screen.dart';
 import 'package:almost/model/constant.dart';
 import 'package:almost/model/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';

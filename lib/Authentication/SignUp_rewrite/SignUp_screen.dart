@@ -1,4 +1,4 @@
-import 'package:almost/SignUp_rewrite/component/body.dart';
+import 'package:almost/Authentication/SignUp_rewrite/component/body.dart';
 import 'package:flutter/material.dart';
 
 class SignUpre extends StatelessWidget {

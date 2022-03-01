@@ -2,12 +2,9 @@
 
 // ignore_for_file: unused_import
 
+import 'package:almost/Authentication/SignUp_rewrite/SignUp_Screen.dart';
 import 'package:almost/Pages/homepages.dart';
-import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
-
 import 'package:almost/model/constant.dart';
-import 'package:almost/login_rewrite/new_login.dart';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

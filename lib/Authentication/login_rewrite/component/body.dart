@@ -1,8 +1,8 @@
-import 'package:almost/SignUp_rewrite/SignUp_screen.dart';
+import 'package:almost/Authentication/SignUp_rewrite/SignUp_Screen.dart';
+import 'package:almost/Authentication/login_rewrite/component/background.dart';
 import 'package:almost/model/constant.dart';
 import 'package:almost/model/profile.dart';
 import 'package:almost/pages/homepages.dart';
-import 'package:almost/login_rewrite/component/background.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
