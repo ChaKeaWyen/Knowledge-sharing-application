@@ -225,6 +225,17 @@ class Tile extends StatelessWidget {
                                   1, index.isEven ? 1.2 : 2);
                             }),
                       ),
+                    ),
+
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        primary: (Peach),
+                      ),
+                      child: (Icon(
+                        Icons.edit,
+                        color: Colors.white,
+                      )),
                     )
                   ],
                 ),
